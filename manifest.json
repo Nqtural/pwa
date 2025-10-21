@@ -1,6 +1,7 @@
 {
     "name": "My App",
     "short_name": "MyApp",
+	"theme_color": "oklch(0.57 0.0817 263.26)",
     "start_url": "./",
     "display": "standalone",
     "icons": [
