@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="theme-color" content="#000000">
+        <title>Template</title>
+        <link rel="stylesheet" href="./style.css">
+		<!--
+		<link rel="icon" href="./icon.ico" type="image/x-icon">
+		-->
+        <script>
+			window.addEventListener('DOMContentLoaded', () => {
+				if ('serviceWorker' in navigator) {
+					navigator.serviceWorker.register('/service-worker.js')
+						.then(reg => console.log('SW registered', reg.scope))
+						.catch(err => console.error('SW registration failed', err));
+				}
+			});
+		</script>
+    </head>
+    <body>
+        <main>
+            <h1>Template</h1>  
+        </main>
+        <!--<script src="./index.js"></script>-->
+    </body>
+</html>
