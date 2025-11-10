@@ -6,11 +6,12 @@
     "a11y:prepare": "npx browser-driver-manager install chrome",
     "a11y:scan": "npx axe --exit http://localhost:5173 http://localhost:5173/about",
     "test:a11y": "npm run a11y:prepare && npm run a11y:scan",
-	"cy:open": "cypress open",
-	"cy:run": "cypress run"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "devDependencies": {
     "@axe-core/cli": "^4.10.2",
+    "@vitejs/plugin-basic-ssl": "^2.1.0",
     "axe-core": "^4.11.0",
     "browser-driver-manager": "^2.0.1",
     "cypress": "^15.5.0",
