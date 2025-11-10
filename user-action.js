@@ -19,7 +19,7 @@ async function enableTorch() {
 	track = stream.getVideoTracks()[0];
 	const caps = typeof track.getCapabilities === 'function' ? track.getCapabilities() : {};
 	if (!caps.torch) {
-		console.warn('Torch not supported on this device');
+		alert('Torch not supported on this device');
 	}
 }
 
@@ -38,7 +38,7 @@ function onMotion(e) {
 	const a = e.accelerationIncludingGravity;
 	if (!a) return;
 	const now = Date.now();
-	if (now - lastTime < 200) return; // throttle
+	if (now - lastTime < 200) return;
 	const magnitude = Math.sqrt((a.x||0)**2 + (a.y||0)**2 + (a.z||0)**2);
 	if (magnitude > 20) {
 		lastTime = now;
